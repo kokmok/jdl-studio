@@ -1,14 +1,24 @@
 (function () {
 
-    var mainKeywords = ['entity', 'enum', 'relationship', 'paginate', 'dto', 'service', 'skipClient', 'skipServer', 'microservice', 'search', 'angularSuffix', 'filter'],
+    var
+      // mainKeywords = ['entity', 'enum', 'relationship', 'paginate', 'dto', 'service', 'skipClient', 'skipServer', 'microservice', 'search', 'angularSuffix', 'filter'],
+      mainKeywords = ['entity', 'relationship'],
     relationshipKws = ['OneToOne', 'OneToMany', 'ManyToOne', 'ManyToMany'],
-    validationKws = ['required', 'minlength', 'maxlength', 'min', 'max', 'minbytes', 'maxbytes', 'pattern'],
+    // relationshipKws = ['OneToOne',  'ManyToOne', 'ManyToMany'],
+    validationKws = ['required', 'maxlength' ],
+    // validationKws = ['required', 'minlength', 'maxlength', 'min', 'max', 'minbytes', 'maxbytes', 'pattern'],
     generalKws = ['with', 'all', 'except', 'to'],
-    paginationKws = ['pagination', 'pager', 'infinite-scroll'],
-    dtoKws = ['mapstruct'],
-    serviceKws = ['serviceClass', 'serviceImpl'],
-    searchKws = ['ElasticSearch'],
-    typeKws = ['String', 'Integer', 'Long', 'BigDecimal', 'Float', 'Double', 'Boolean', 'LocalDate', 'ZonedDateTime', 'Instant', 'Blob', 'AnyBlob', 'ImageBlob'];
+    // paginationKws = ['pagination', 'pager', 'infinite-scroll'],
+    paginationKws = [],
+    // dtoKws = ['mapstruct'],
+    dtoKws = [],
+    // serviceKws = ['serviceClass', 'serviceImpl'],
+    serviceKws = [],
+    // searchKws = ['ElasticSearch'],
+    searchKws = [],
+    // typeKws = ['String', 'Integer', 'Long', 'BigDecimal', 'Float', 'Double', 'Boolean', 'LocalDate', 'ZonedDateTime', 'Instant', 'Blob', 'AnyBlob', 'ImageBlob']
+    typeKws = ['Array', 'Simple_array', 'Json_array', 'Object','Boolean', 'Integer', 'Smallint', 'Bigint', 'String', 'Text', 'Datetime', 'Datetimetz', 'Date', 'Time', 'Decimal', 'Float', 'Binary', 'Blob', 'Guid']
+      ;
 
     CodeMirror.defineMode('jdl', function() {
         var words = {};
